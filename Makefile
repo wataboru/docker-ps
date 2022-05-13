@@ -22,14 +22,14 @@ show-version: $(GOBIN)/gobump
 	@gobump show -r $(VERSION_PATH)
 
 $(GOBIN)/gobump:
-	@cd && go get github.com/x-motemen/gobump/cmd/gobump
+	@cd && go install github.com/x-motemen/gobump/cmd/gobump
 
 .PHONY: cross
 cross: $(GONAME)/goxz
 	goxz -n $(NAME) -pv=v$(VERSION) -build-ldflags=$(BUILD_LDFLAGS) ./cmd/$(NAME)
 
 $(GONAME)/goxz:
-	cd && go get github.com/Songmu/goxz/cmd/goxz
+	cd && go install github.com/Songmu/goxz/cmd/goxz
 
 .PHONY: test
 test: build
@@ -53,4 +53,4 @@ upload: $(GONAME)/ghr
 	ghr "v$(VERSION)" goxz
 
 $(GONAME)/ghr:
-	cd && go get github.com/tcnksm/ghr
+	cd && go install github.com/tcnksm/ghr
