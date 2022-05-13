@@ -1,4 +1,4 @@
-module github.com/wataboru/git-fuzzy-find-commit-message
+module github.com/wataboru/docker-ps
 
 go 1.18
 
