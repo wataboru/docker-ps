@@ -42,6 +42,9 @@ $ docker-ps
 
 4. Container ID will be copied to the clipboard
 ```
+$ docker-ps
+
+3e1b9dcb1231 copied to clipboard.⏎
 ```
 
 ### Version
@@ -54,6 +57,7 @@ $ docker-ps -v
 
 - https://github.com/ktr0731/go-fuzzyfinder
 - https://github.com/tcnksm/ghr
+- https//github.com/atotto/clipboard
 
 ## Refer to the following for implementation
 
