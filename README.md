@@ -7,7 +7,7 @@ docker-ps provides a fuzzy search function for `docker ps`.
 ### Install
 
 ```
-$ go get github.com/wataboru/docker-ps/cmd/fcm
+$ go get github.com/wataboru/docker-ps/cmd/docker-ps
 ```
 
 Download from [releases](https://github.com/wataboru/git-fuzzy-find-commit-message/releases)
