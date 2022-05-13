@@ -21,7 +21,7 @@ Download from [releases](https://github.com/wataboru/git-fuzzy-find-commit-messa
 $ docker-ps
 ```
 
-2. Enter commit message and Choose templates
+2. Choose contaienr
 ```
  null TextEditorComponent::domNode during visibility check           ┌────────────────────────────────────────────────────────────────────┐
   Avoid infinite recursion when bad values are passed to tz aware .. │  Add build script                                                  │
@@ -63,51 +63,14 @@ $ docker-ps
 > Add
 ```
 
-3. Edit message and save
+4. Container ID will be copied to the clipboard
 ```
-Add Makefile and build script
-
-# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-#
-# On branch master
-# Your branch is up to date with 'origin/master'.
-#
-# Changes to be committed:
-#       modified:   Makefile
-#       modified:   .github/workflows/release.yml
-#
-```
-
-4. Commited
-```
-[master ******] Add Makefile and build script
- 2 files changed, 114 insertions(+), 8 deletions(-)
- rewrite LICENSE (79%)
 ```
 
 ### Version
 
 ```
-$ fcm -v
-```
-
-## Generate files
-
-This app generates the following files.
-- ~/.fcm  
-  Message Template. You can add your own additions to increase the number of Fuzzy Find candidates.
-- ~/.fcm_history  
-  Each time you commit using fcm, the history is added to this page. The history is also a candidate for a Fuzzy Find.
-
-### Format
-
-- `~/.fcm` or `~/.fcm_history`
-```
-# This line is CommentOut, Not use.
-FuzzyFind candidate1
-FuzzyFind candidate2
-FuzzyFind candidate3
+$ docker-ps -v
 ```
 
 ## Use as a libary
@@ -119,5 +82,3 @@ FuzzyFind candidate3
 
 - https://github.com/skanehira/fk  
 I referred to CI and Build as a whole.
-- https://anond.hatelabo.jp/20160725092419  
-I got all the default message templates from here.
