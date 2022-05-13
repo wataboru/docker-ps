@@ -4,6 +4,7 @@ package dockerps
 
 import (
 	"bufio"
+	"fmt"
 	"github.com/atotto/clipboard"
 	"github.com/ktr0731/go-fuzzyfinder"
 	"strings"
@@ -59,6 +60,8 @@ func Copy() (err error) {
 	if err := clipboardWriteAll(containerID[0]); err != nil {
 		return err
 	}
+
+	fmt.Printf("%s copied to clipboard\n", containerID[0])
 
 	return nil
 }
