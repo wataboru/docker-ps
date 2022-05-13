@@ -2,8 +2,6 @@
 
 docker-ps provides a fuzzy search function for `docker ps`.
 
-![description](https://raw.githubusercontent.com/wiki/wataboru/git-fuzzy-find-commit-message/images/fcm_description.gif)
-
 ## Use as CLI
 
 ### Install
