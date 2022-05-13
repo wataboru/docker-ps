@@ -2,8 +2,6 @@
 
 docker-ps provides a fuzzy search function for `docker ps`.
 
-![description](https://raw.githubusercontent.com/wiki/wataboru/git-fuzzy-find-commit-message/images/fcm_description.gif)
-
 ## Use as CLI
 
 ### Install
@@ -21,103 +19,45 @@ Download from [releases](https://github.com/wataboru/git-fuzzy-find-commit-messa
 $ docker-ps
 ```
 
-2. Enter commit message and Choose templates
+2. Choose contaienr
 ```
- null TextEditorComponent::domNode during visibility check           ┌────────────────────────────────────────────────────────────────────┐
-  Avoid infinite recursion when bad values are passed to tz aware .. │  Add build script                                                  │
-  Avoid distinct if a subquery has already materialized              │                                                                    │
-  Add -enable-experimental-nested-generic-types frontend flag        │                                                                    │
-  Add support for activating and deactivating package-specific key.. │                                                                    │
-  Add a helper method mayHaveOpenedArchetypeOperands to SILInstruc.. │                                                                    │
-  Add a typealias to avoid a build ordering dependency between pro.. │                                                                    │
-  Add --main-process flag to run specs in the main process           │                                                                    │
-  Add support for closure contexts to readMetadataFromInstance()     │                                                                    │
-  Add a basic test for opening an editor in largeFileMode if >= 2M.. │                                                                    │
-  Add support for allocators that require tensors with zero          │                                                                    │
-  Add "event" parameter for "click" handler of MenuItem              │                                                                    │
-  Add a design-decisions section to the CONTRIBUTING guide           │                                                                    │
-  Add Throws flag and ThrowsLoc to AbstractFunctionDecl              │                                                                    │
-  Add TODO about blinkFeatures -> enableBlinkFeatures                │                                                                    │
-  Add validation test for projecting existentials                    │                                                                    │
-  Add failing spec for Menu.buildFromTemplate                        │                                                                    │
-  Add SkUserConfig.h with blank SkDebugf macro                       │                                                                    │
-  Add support for launching HTML files directly                      │                                                                    │
-  Add documentation for --proxy-bypass-list                          │                                                                    │
-  Add assertions for no available bookmark                           │                                                                    │
-  Add assert for role with app name in label                         │                                                                    │
-  Add convenience API for demangling                                 │                                                                    │
-  Add specs for moveSelectionLeft()                                  │                                                                    │
-  Add comment about map key/values                                   │                                                                    │
-  Add TypeLowering::hasFixedSize()                                   │                                                                    │
-  Add File > Exit menu on Windows                                    │                                                                    │
-  Add tests for pending pane items                                   │                                                                    │
-  Add missing period in comment                                      │                                                                    │
-  Add docs for app.getLocale()                                       │                                                                    │
-  Add asserts for properties                                         │                                                                    │
-  Add style.less examples                                            │                                                                    │
-  Add overflow scrolling                                             │                                                                    │
-  Add npm start script                                               │                                                                    │
-  Add missing return                                                 │                                                                    │
-> Add build script                                                   │                                                                    │
-  38/125                                                             │                                                                    │
-> Add
+  b65cdae7874b   hogee:alipne   "bash"                   3 weeks ago         Exited (2) 3 weeks ago                                   hogee
+  5232f50e8d12   fuga:alpine    "docker-entrypoint.s… "  11 days ago         Up About an hour               0.0.0.0:12345->3210/tcp   fuga-1
+  349556d99c30   piyo:5.6       "docker-entrypoint.s… "  11 days ago         Up About an hour               0.0.0.0:10000->0123/tcp   piyo-1
+  4d1c0ad7eda8   poyo:alpine    "bash"                   10 days ago         Exited (1) 20 days ago                                   poyo_run_81dd864f669c
+  8d78bcf3693a   test1          "bash"                   19 days ago         Exited (1) 19 days ago                                   test1_run_59d0150a8b64
+  ac59c93da4e8   test2_app      "bash"                   18 days ago         Exited (1) 18 days ago                                   test2_run_63ed7e08a01c
+  94e703547a2d   test3_app      "bash"                   17 days ago         Exited (0) 17 days ago                                   test3_run_79a51946aca1
+  b275a81b642e   test4_app      "bash"                   16 days ago         Exited (1) 16 days ago                                   test4_run_3bcd0ec0a301
+  e9ca6ebb0723   test5_app      "bash"                   15 days ago         Exited (0) 15 days ago                                   test5_run_c075b8e0c8d1
+  5bc6f6bbdff7   test6_app      "bash"                   14 days ago         Exited (0) 14 days ago                                   test6_run_ae6eb9b7635e
+> 3e1b9dcb1231   test7_app      "bash"                   13 days ago         Exited (1) 13 days ago                                   test7_run_89fc025d56eb
+  a092081a5fb9   test8_app      "bash"                   12 days ago         Exited (1) 12 days ago                                   test8_run_56918d43cfb5
+  b5b4311601a0   test9_app      "bash"                   11 days ago         Exited (1) 11 days ago                                   test9_run_353288f2f896
+  f3fdd457fda4   test0_app      "/bin/sh"                About an hour ago   Exited (0) About an hour ago                             test-app-1
+  14/14
 ```
 
-3. Edit message and save
+4. Container ID will be copied to the clipboard
 ```
-Add Makefile and build script
+$ docker-ps
 
-# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-#
-# On branch master
-# Your branch is up to date with 'origin/master'.
-#
-# Changes to be committed:
-#       modified:   Makefile
-#       modified:   .github/workflows/release.yml
-#
-```
-
-4. Commited
-```
-[master ******] Add Makefile and build script
- 2 files changed, 114 insertions(+), 8 deletions(-)
- rewrite LICENSE (79%)
+3e1b9dcb1231 copied to clipboard.⏎
 ```
 
 ### Version
 
 ```
-$ fcm -v
-```
-
-## Generate files
-
-This app generates the following files.
-- ~/.fcm  
-  Message Template. You can add your own additions to increase the number of Fuzzy Find candidates.
-- ~/.fcm_history  
-  Each time you commit using fcm, the history is added to this page. The history is also a candidate for a Fuzzy Find.
-
-### Format
-
-- `~/.fcm` or `~/.fcm_history`
-```
-# This line is CommentOut, Not use.
-FuzzyFind candidate1
-FuzzyFind candidate2
-FuzzyFind candidate3
+$ docker-ps -v
 ```
 
 ## Use as a libary
 
 - https://github.com/ktr0731/go-fuzzyfinder
 - https://github.com/tcnksm/ghr
+- https//github.com/atotto/clipboard
 
 ## Refer to the following for implementation
 
 - https://github.com/skanehira/fk  
 I referred to CI and Build as a whole.
-- https://anond.hatelabo.jp/20160725092419  
-I got all the default message templates from here.
