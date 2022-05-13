@@ -41,7 +41,7 @@ lint: $(GONAME)/golint
 	golint -set_exit_status ./...
 
 $(GONAME)/golint:
-	cd && go get golang.org/x/lint/golint
+	cd && go install golang.org/x/lint/golint
 
 .PHONY: clean
 clean:
