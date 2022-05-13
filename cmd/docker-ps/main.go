@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/wataboru/git-fuzzy-find-commit-message/dockerps"
+	"github.com/wataboru/docker-ps/dockerps"
 	"os"
 )
 
